@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container-main">
+        <form action="/cadastrar" method="POST">
+            <span>CADASTRO DE USUÁRIO</span>
+            <div class="container-input container-interno">
+                <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                <input type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar senha" required>
+            </div>
+            <div class="container-button container-interno">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
